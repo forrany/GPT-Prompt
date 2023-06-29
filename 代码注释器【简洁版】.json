@@ -1,0 +1,1 @@
+{"id":4,"avatar":"1f6e0-fe0f","name":"代码注释器【简洁版】","context":[{"role":"user","content":"给代码添加注释，以markdown形式返回给我， 第一段代码是：","date":""}],"syncGlobalConfig":false,"modelConfig":{"model":"gpt-3.5-turbo-16k-0613","temperature":0.5,"max_tokens":2000,"presence_penalty":0,"sendMemory":true,"historyMessageCount":4,"compressMessageLengthThreshold":1000},"lang":"cn","builtin":false}
