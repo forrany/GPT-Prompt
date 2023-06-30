@@ -39,7 +39,7 @@ FOXGPT的官网已经宕了很久了，不知道是不是为了避风头，但�
 
 安装Chrome插件，ChatGPT Sidebar，并在设置中填写上面获得的密钥和代理URL:
 
-![image-20230629122741981](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230629122741981.png)
+![image-20230630194337286](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230630194337286.png)
 
 这样，就获取了一份免费、高效的GPT助手，基本可以无限制的使用助手，并且在配置中，添加自己的日常需要的Prompt。
 
