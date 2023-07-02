@@ -11,6 +11,7 @@ GPT可以渗透在各个领域，不同的人群、不同的工作对于如何�
 ![image-20230630160301176](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230630160301176.png)
 
 如果不能很好的解决这个点，似乎很难让“助手”为所有人所用，毕竟大部分都还是习惯“白嫖”
+
 ## 吃上免费的午餐(GPT)
 
 在github上，有一个高达41.6K star的项目，[xtekky/gpt4free](https://github.com/xtekky/gpt4free)。项目正如其名称一样简单： 免费使用GPT。它的原理，就是借助市场上免费的GPT（比如Bing、Poe）等，做的一层反向代理。
@@ -33,6 +34,7 @@ FOXGPT的官网已经宕了很久了，不知道是不是为了避风头，但�
 这样，你就获取了一份`fg`开头的密钥，与open ai 的使用方式一致，无论是使用open ai的api还是直接使用相关应用，只需要将`base_url`替换为代理地址，这里是`https://api.hypere.app`
 
 
+
 ## 工具加持打造丝滑体验
 
 ### 浏览器插件 + Free API = 免费的丝滑体验
@@ -42,6 +44,44 @@ FOXGPT的官网已经宕了很久了，不知道是不是为了避风头，但�
 ![image-20230630194337286](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230630194337286.png)
 
 这样，就获取了一份免费、高效的GPT助手，基本可以无限制的使用助手，并且在配置中，添加自己的日常需要的Prompt。
+
+
+
+#### 使用最新模型: gpt-3.5-16k-0613
+
+foxgpt提供的转发接口，仅代理了官方的`/v1/chat`接口，获取模型列表的接口`/v1/model`并没有做映射，因此，在首次填入API Key和URL时，会报错（如下图），但是报错并不影响侧栏的使用，默认使用的模型是`gpt-3.5-turbo`。
+
+<img src="https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230702002152382.png" alt="image-20230702002152382" style="zoom: 33%;" />
+
+
+
+但是，fotgpt的免费API是支持最新的`gpt-3.5-turbo-16k-0613`的，相比于`gpt-3.5-turbo`,不仅提高了context上限，也更节省token。所以，为了能够使用最新的模型，需要在拉取列表的时候，对返回数据进行一下修改，只要能选上`gpt-3.5-turbo-16k-0613`模型，以后就可以一直使用了。
+
+因为接口无法调通，这里介绍使用抓包替换Response的方法实现来实现模型的切换。
+
+
+
+1. 模型列表数据
+
+模型列表数据已经命名为[model-list.json](https://github.com/forrany/GPT-Prompt/blob/master/model-list.json),并放在了仓库的同名文件中。
+
+2. 抓包软件
+
+这里Mac推荐使用Charles软件抓包、替换返回数据； Windows可以使用Fiddler。
+
+3. Charles替换response示例
+
+Charles和Fiddler是非常优秀的抓包软件，使用教程这里不再赘述。这里以Charles抓包作为示例，开始抓包后，找到`https://api.hypere.app`的`/v1/models`接口，右键点击`Map Local...`，并在弹出的窗口中，将其替换步骤一下载的`model-list.json`，如下图
+
+![image-20230702003712772](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230702003712772.png)
+
+4. 替换后，再次返回插件设置，并点击更新按钮，成功获得模型列表，并选择最新的模型，然后 Just Enjoy It！
+
+
+
+![image-20230702003912306](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230702003912306.png)
+
+
 
 #### 日常开发常用Prompt
 
