@@ -5,14 +5,14 @@
 目前主要有两个渠道：
 
 - FoxGPT： 基本无限制，完全没有任何使用压力，但是2023年7月份后开始不太稳定，偶尔宕机；
-- ChatAnyWhereAPI：免费的API限制为120次/Hour, 但是个人的日常使用应该是完全没问题，相对稳定，且支持GPT Slide（下文会介绍该插件）拉取Model接口。
+- ChatAnyWhereAPI：免费的API限制为120次/Hour, 但是个人的日常使用应该是完全没问题，相对稳定，且支持[GPT Slide](###浏览器插件 + Free API = 免费的丝滑体验)拉取Model接口。
 
 FoxGPT及其API获取方法下文会详细介绍，这里主要更新下其备用借口ChatAnyWhere API的方法。
 
 ### 备用接口
 备用接口仓库在这里：[GPT-API-FREE](https://github.com/chatanywhere/GPT_API_free)。 
 
-快速使用方法：
+快速食用方法：
 
 1. [点击获取免费Key](https://api.chatanywhere.cn/v1/oauth/free/github/render)
 2. 在使用的App或者插件中修改base-url为以下其中之一（App的使用会在下文详细介绍
@@ -57,6 +57,8 @@ FOXGPT的官网已经宕了很久了，不知道是不是为了避风头，但�
 
 
 #### 使用最新模型: gpt-3.5-16k-0613
+
+使用[备用接口](###备用接口)可以直接拉取到模型列表，直接选择`gpt-3.5-16k0613`即可。如果没有使用备用接口，可以使用以下方法选择到最新模型（FOTGPT支持该模型，但是没有获取模型列表的方法）
 
 foxgpt提供的转发接口，仅代理了官方的`/v1/chat`接口，获取模型列表的接口`/v1/model`并没有做映射，因此，在首次填入API Key和URL时，会报错（如下图），但是报错并不影响侧栏的使用，默认使用的模型是`gpt-3.5-turbo`。
 
