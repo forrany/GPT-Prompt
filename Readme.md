@@ -1,5 +1,44 @@
 ## 最新进展
 
+7月21日
+---
+
+更新一些渠道，以防止出现免费渠道崩溃、不可用的情况。
+
+下面表格数据来源于[NovaOSS/free-api-apis](https://github.com/NovaOSS/free-ai-apis)（感兴趣可以start原项目）并根据个人使用体验，排除了一些不好用或不稳定的服务。
+
+目前来看，所有的体验中，最稳定的仍然是[备用接口](#backupapi)
+
+同时，为了更好的管理这么多的渠道，可以使用[one-api](https://github.com/songquanpeng/one-api)进行渠道管理，并生成属于自己的key,如下图所示，可以快捷的开启、关闭渠道
+
+
+
+![](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/image-20230721163104883.png?imageMogr2/format/webp)
+
+
+
+| Name                                    | Discord                                                      | API Endpoint                                    | GPT-4       | No IP lock? | Rate limits               | Note                                    |
+| --------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------- | ----------- | ----------- | ------------------------- | --------------------------------------- |
+| NovaAI                                  | [vpHfk6eqHu](https://discord.gg/vpHfk6eqHu)                  | ***coming soon...*** `https://api.nova-oss.com` | ✅           | ✅           | Automatically adapting    | NOT RELEASED YET                        |
+| ChimeraGPT                              | [GUCbQMmH2B](https://discord.gg/GUCbQMmH2B)                  | `https://chimeragpt.adventblocks.cc/v1`         | ✅           | ✅           | 10/m, 1000/d for gpt-4    | GPT-4 uses poe.com, quite controversial |
+| Skailar                                 | [Qk4QHvXS9z](https://discord.com/invite/Qk4QHvXS9z)/[alt](https://discord.gg/CAPKjGmbVZ) | `https://api.skailar.net/v1`                    | ✅ 5/day[^2] | ✅           | 2k/day[^3]                |                                         |
+| CattoGPT                                | [cattogpt](https://discord.gg/cattogpt)                      | `https://api.cattto.repl.co/v1`                 | ✅ 150       | ❌           | 20k                       |                                         |
+| [FoxGPT](https://github.com/FoxGPT/gpt) | No permanent invite                                          | `https://api.hypere.app`                        | ❌           | ✅           | 30k/day 2k/h 60/min 5/sec | Frequent issues                         |
+| Chatty API                              | [KT9MWZ64w8](https://discord.gg/KT9MWZ64w8)                  | `https://chattyapi.tech`                        | ✅           | ✅           | Unlimited                 | Claims to offer unlimited GPT-4 access  |
+
+
+
+
+
+
+[^1]: https://discord.com/channels/1055397662976905229/1103934259909103677/1103935598596734976
+[^2]: https://discord.com/channels/1120753218071310346/1120757570026602537/1121581426232537218
+[^3]: https://discord.com/channels/1120753218071310346/1120757570026602537/1121579437373264012
+
+
+6月17日
+------
+
 很可惜，近期本仓库所使用的FOXGPT的API不太稳定，会出现宕机，无法请求的问题。因此，为了能维持日常使用，这里不再依赖单一的API，而是提供更多的备用选项，以此来避免当某个免费API宕机而无法使用的问题。
 
 目前主要有两个渠道：
@@ -9,7 +48,7 @@
 
 FoxGPT及其API获取方法下文会详细介绍，这里主要更新下其备用借口ChatAnyWhere API的方法。
 
-### 备用接口
+### 备用接口 {#backupapi}
 备用接口仓库在这里：[GPT-API-FREE](https://github.com/chatanywhere/GPT_API_free)。 
 
 快速食用方法：
@@ -27,11 +66,13 @@ FoxGPT及其API获取方法下文会详细介绍，这里主要更新下其备�
 
 借助此项目，我们可以完全做一套自己API，实现自己的API Server，然后开发和使用OPEN AI的各种模型。关于这个，我们晚点再说，因为有更简单、易用的方式，有人已经帮我们搭建好了API代理，且具有充足的免费使用额度 FOXGPT。
 
-FOXGPT的官网已经宕了很久了，不知道是不是为了避风头，但是其根据地discord还是保持联络的状态。因此，通过以下几个步骤，就可以轻松拿到代理的API KEY
+> 目前邀请链接已失效，请看最新更新的渠道，或者使用较稳定的[备用接口](#backupapi)
 
-1. 注册discord账号；
-2. 点击邀请链接，加入foxgpt：[邀请链接](https://discord.gg/YBuHTWeD)
-3. 在群组中，找到verify频道，点击认证
+~~FOXGPT的官网已经宕了很久了，不知道是不是为了避风头，但是其根据地discord还是保持联络的状态。因此，通过以下几个步骤，就可以轻松拿到代理的API KEY~~
+
+~~1. 注册discord账号；~~
+~~2. 点击邀请链接，加入foxgpt：[邀请链接](https://discord.gg/YBuHTWeD)~~
+~~3. 在群组中，找到verify频道，点击认证~~
 
 在左侧verify频道，进入后点击输入验证码，即可完成认证
 ![企业微信截图_43d7c9b8-8afd-4e58-8bf0-79bd654fba1f](https://pic-bed-1302552283.cos.ap-guangzhou.myqcloud.com/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_43d7c9b8-8afd-4e58-8bf0-79bd654fba1f.png)
@@ -58,7 +99,7 @@ FOXGPT的官网已经宕了很久了，不知道是不是为了避风头，但�
 
 #### 使用最新模型: gpt-3.5-16k-0613
 
-使用[备用接口](###备用接口)可以直接拉取到模型列表，直接选择`gpt-3.5-16k0613`即可。如果没有使用备用接口，可以使用以下方法选择到最新模型（FOTGPT支持该模型，但是没有获取模型列表的方法）
+使用[备用接口](#backupcpi)可以直接拉取到模型列表，直接选择`gpt-3.5-16k0613`即可。如果没有使用备用接口，可以使用以下方法选择到最新模型（FOTGPT支持该模型，但是没有获取模型列表的方法）
 
 foxgpt提供的转发接口，仅代理了官方的`/v1/chat`接口，获取模型列表的接口`/v1/model`并没有做映射，因此，在首次填入API Key和URL时，会报错（如下图），但是报错并不影响侧栏的使用，默认使用的模型是`gpt-3.5-turbo`。
 
